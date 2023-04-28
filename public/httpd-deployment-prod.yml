@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: httpd-deployment-prod
- namespace: prod
+ name: httpd-deployment-dev
+ namespace: cdh-dev
 spec:
  selector:
    matchLabels:
@@ -18,7 +18,7 @@ spec:
       image: cis07385/front:latest
       envFrom:
       - configMapRef:
-          name: httpd-cm-prod
+          name: httpd-cm-dev
       ports:
       - containerPort: 80
       resources:
