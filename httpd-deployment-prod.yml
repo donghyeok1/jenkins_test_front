@@ -18,6 +18,6 @@ spec:
       image: cis07385/front:latest
       envFrom:
       - configMapRef:
-          name: httpd-cm-dev
+          name: frontend-cm
       ports:
       - containerPort: 80
