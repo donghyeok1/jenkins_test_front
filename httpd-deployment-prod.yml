@@ -6,12 +6,12 @@ metadata:
 spec:
  selector:
    matchLabels:
-    type: web
+    type: front
  replicas: 1
  template:
    metadata:
      labels:
-       type: web
+       type: front
    spec:
     containers:
     - name: container
